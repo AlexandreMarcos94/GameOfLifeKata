@@ -10,6 +10,7 @@ public class Main {
 
             g.generateNextState();
             System.out.println(g.toString());
+         
         }
     }
 }
