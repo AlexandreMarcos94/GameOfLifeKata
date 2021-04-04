@@ -27,14 +27,6 @@ public class Cell {
         if(!isAlive && nbNeighbourCellsAlive == 3 ){
             isAlive = true;
         }
-
-        /*
-            if(isAlive && nbNeighbourCellsAlive == 2 || nbNeighbourCellsAlive == 3){
-                isAlive = true;
-                } else {
-                    isAlive = false;
-             }
-        */
          isAlive = isAlive && nbNeighbourCellsAlive == 2 || nbNeighbourCellsAlive == 3;
 
         return isAlive;
