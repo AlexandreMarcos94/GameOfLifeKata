@@ -142,7 +142,6 @@ public class Grid {
     private void cellIn(int i, int j) {     // For Cell in the Array (not corner or side)
 
         if (i != 0 && j != 0 && j != sizeGrid - 1 && i != sizeGrid - 1) {
-
             avoidDupli(i, j);
             if (cells[i - 1][j - 1].isAlive()) NbAlive++;
             if (cells[i + 1][j - 1].isAlive()) NbAlive++;
@@ -151,7 +150,6 @@ public class Grid {
             isCellAlive = Cell.processState(cells[i][j].isAlive(), NbAlive);
             tmpC[i][j].setIsAlive(isCellAlive);
         }
-
     }
 
     public void generateNextState() {
@@ -163,7 +161,6 @@ public class Grid {
         }
         for (int i = 0; i < sizeGrid; i++) {
             for (int j = 0; j < sizeGrid; j++) { // Select the cell to look on
-
                 side(i, j);
                 Corner(i, j);
                 cellIn(i, j);
