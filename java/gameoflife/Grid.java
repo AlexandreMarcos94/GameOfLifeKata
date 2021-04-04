@@ -52,25 +52,6 @@ public class Grid {
 
         }
 
-        if (i == sizeGrid - 1 && j == 0) {       // For the bottom-left corner
-            if (cells[sizeGrid - 2][0].isAlive()) NbAlive++;
-            if (cells[sizeGrid - 2][1].isAlive()) NbAlive++;
-            if (cells[sizeGrid - 1][1].isAlive()) NbAlive++;
-
-            isCellAlive = Cell.processState(cells[i][j].isAlive(), NbAlive);
-            tmpC[i][j].setIsAlive(isCellAlive);
-
-        }
-
-        if (i == 0 && j == sizeGrid - 1) {       // For the top-right corner
-            if (cells[0][sizeGrid - 2].isAlive()) NbAlive++;
-            if (cells[1][sizeGrid - 2].isAlive()) NbAlive++;
-            if (cells[1][sizeGrid - 1].isAlive()) NbAlive++;
-
-            isCellAlive = Cell.processState(cells[i][j].isAlive(), NbAlive);
-            tmpC[i][j].setIsAlive(isCellAlive);
-
-        }
     }
 
     private void side(int i, int j) {
