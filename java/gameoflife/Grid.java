@@ -29,7 +29,7 @@ public class Grid {
     private void generateRandomInitialState() {
         for (int i = 0; i < sizeGrid; i++) {
             for (int j = 0; j < sizeGrid; j++) {
-                if (this.rd.nextInt() % 6 == 0) {
+                if (this.rd.nextInt() % 2 == 0) {
                     this.cells[i][j] = new Cell(false);
                 } else {
                     this.cells[i][j] = new Cell(true);
